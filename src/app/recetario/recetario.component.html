@@ -1,0 +1,19 @@
+
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Recetas</h1>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let receta of recetas">
+        <div class="card mb-4">
+          <img [src]="receta.image" alt="{{ receta.name }}" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">{{ receta.name }}</h5>
+            <p class="card-text">{{ receta.description }}</p>
+            <button class="btn btn-primary" (click)="toggleLike(receta)">
+              {{ receta.leGusto ? '👍 Me gustó' : '👎 No me gustó' }}
+            </button>
+          <!--  <a href="instrucciones.html">ver mas</a> -->  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

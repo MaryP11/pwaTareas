@@ -1,0 +1,35 @@
+
+   <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center bg-primary text-white">
+                        <h2>Gestión de Tareas</h2>
+                    </div>
+                    <div class="card-body">
+                        <form  [formGroup]="form" id="taskForm">
+                            <div class="form-group">
+                                <label for="taskInput">Nueva Tarea</label>
+                                <input formControlName="text" type="text" class="form-control" id="taskInput" placeholder="Escribe una tarea">
+                            </div>
+                            <button type="button" (click)="agregarTareaALista()" class="btn btn-primary btn-block">Añadir Tarea</button>
+                        <ul id="taskList" class="list-group mt-4">
+
+                            <li *ngFor="let task of lista; let i = index" class="list-group-item">
+                                {{ task }}
+                                <button 
+                                type="button" 
+                                class="btn btn-danger btn-sm float-right" 
+                                (click)=" borrarTareaALista(i)">
+                                Eliminar
+                            </button>
+                        </li>
+                    </ul>
+                    </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
