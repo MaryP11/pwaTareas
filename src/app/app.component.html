@@ -1,1 +1,11 @@
-<router-outlet />
+
+ 
+
+
+  <div class="center-container">
+    <button mat-raised-button color="primary" (click)="showInstallPrompt()" *ngIf="deferredPrompt" style="background-color: #4CAF50; color: white;">
+      ¡Instala nuestra app!
+    </button>
+  </div>
+  
+  <router-outlet />
